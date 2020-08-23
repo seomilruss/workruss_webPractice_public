@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>웹 호스팅 테스트</title>
+        <style>
+            * {
+                margin:0;
+                padding:0;
+            }
+
+            div {
+                width:100%;
+                height:100vh;
+                background-color:red;
+            }
+
+            @media (max-width:500px) {
+                div {
+                    background-color:green;
+                    border-radius:50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>접속하신 디바이스의 화면크기에 따라서 색상이 변경됩니다.</div>
+    </body>
+</html>
+
+<!--
+    리눅스 서버
+    읽기(R)     쓰기(W)     실행(X)
+    4           2           1
+-->

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>페이지 레이아웃 설정</title>
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <style>
+            * { /* 초기화 */
+                margin:0;
+                padding:0;
+            }
+
+            header {
+                width: 100%; /* 100% 가득채움 */
+                height: 800px;
+                background-color:#ccc;
+                background-image:url(images/panda.jpg);
+                background-size: cover;
+                background-repeat:no-repeat; /* 반복하지 마시오 */
+                background-position:center; /* 위치를 중심으로 */
+            }
+
+            footer {
+                width:100%;
+                height:400px;
+                background-color:#000;
+                background-image: url(images/food3.jpg);
+            }
+
+            section {
+                width:100%;
+                height:300px;
+            }
+
+            section:nth-child(2n) { background-color:#f7f7f7; /* section 중에서 짝수를 찾기 */ }
+
+            .fas { display:none; /* 늘리면 사라짐 */ }
+
+            span {
+                color:#f00;
+                font-weight:700;
+            }
+            @media (max-width:500px) {
+                .fas { display:block; /* 화면 크기에 따라 나타나고 사라짐 */ }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <i class="fas fa-bars"></i>
+        </header>
+        <main>
+            <section class="one">
+                <mark>첫번째 메인</mark> <!-- 검색어를 입력시 또는 강조시 사용 - 잘안씀 -->
+                <span><strong>아이디</strong></span><input type="text"> <!-- span에 해당하는 것만 강조할 때 -->
+            </section>
+            <!-- <hr /> -->
+            <section class="two">두번째 메인</section>
+            <!-- <hr /> -->
+            <section class="three">세번째 메인</section>
+            <!-- <hr /> -->
+            <section class="five">다섯번째 메인</section>
+        </main>
+        <footer>카피라이터 부분</footer>
+        <aside>플로팅 메뉴</aside>
+    </body>
+</html>
+
+<!--
+    horizintal
+
+    webbage.html - html5
+    <header> - 큰 이미지
+    나머지는 <main>
+    <footer> - 카피라이터
+    <asside> - 플로팅메뉴
+    
+    사진위에 글자가 보이면
+    <img src="">는 불가능
+    background를 사용
+
+    ---
+    시멘틱
+    <style>
+        font-weight 폰트 두께
+    </style>
+
+    <strong></strong> 시각장애우를 위한 강조
+    <b></b> 폰트를 진하게
+
+    비쥬얼스튜디오 코드에서 주석은 ctrl + /으로
+-->

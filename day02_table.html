@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블 태그 예제</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <style>
+            * { /* 초기화 */
+                margin:0;
+                padding:0;
+            }
+
+            a {
+                color:rgba(0, 0, 0, 1); /* 색상지정 */
+                text-decoration:none; /* text 테두리 제거 */
+            }
+            a:hover {
+                text-decoration:underline; /* 밑줄 */
+                color:blue; /* 색상 지정*/
+            }
+
+            table {
+                width:100%; /* 폭지정 */
+                font-family: 'Noto Sans KR', sans-serif; /* 폰트지정 */
+                border-collapse: collapse; /* 테이블 여백 제거 */
+                font-size: 14px; /* 기본크기 16px */
+            }
+
+            tr { height:40px; /* 높이값은 30~35px */ }
+
+            tr:first-child {
+                background-color:tomato;
+                color:#fff;
+                text-align:center;
+            }
+
+            tr:nth-chile(2) {
+                border-bottom: 1px solid #ccc;
+                text-align:center;
+                /* color:rgba(0, 0, 0, 0.7); a : 투명도 조정 */
+            }
+
+            td:nth-child(1) { width:10%; }
+            td:nth-child(2) { width:40%; }
+            td:nth-child(3) { width:15%; }
+            td:nth-child(4) { width:15%; }
+            td:nth-child(5) { width:10%; }
+            td:nth-child(6) { width:10%; }
+
+            .left { text-align:left; }
+
+            caption {
+                text-align:right;
+                padding:10px;
+                /*
+                    두께값 : 아래위 좌우
+                    값의 중복 소거
+                    위쪽 왼쪽 아래쪽 왼쪽 : 10px;
+                */
+            }
+
+            .num {
+                border:1px solid #eee;
+                padding:8px 12px;
+                display:inline-block;
+            }
+
+            .page {
+                margin-top:10px;
+                text-align:center;
+            }
+
+            .active {
+                background-color:#000;
+                color:#fff;
+                border:1px solid transparent;
+            }
+
+            .btn {
+                text-align:right;
+                padding:0 10px;
+            }
+
+            .common {
+                /* write와 list 공통적 요소 */
+                color:#fff;
+                border:0;
+                padding:8px 15px;
+                outline:none;
+                cursor:pointer;
+                font-size:12px;
+            }
+
+            .write { background-color:tomato; }
+            .list { background-color:blue; }
+            .tbl { padding:0 10px; }
+
+            .social i {
+                /* 띄어쓰기는 ~안에 */
+                font-size:24px;
+                width:40px;
+                height:40px;
+                border-radius:50%;
+                border: 1px solid #eee;
+                /* border:5px dotted #000; 점선 */
+                text-align: center;
+                line-height:40px;
+                margin-right:20px;
+            }
+
+            .social i:last-child { margin-right:0; /* 마지막 오른쪽 여백 제거 */ }
+
+            .social i:hover {
+                color:tomato;
+                transition: 0.5s; /* 50% */
+                cursor: pointer;
+                background-color:#f7f7f7;
+            }
+
+            .social { text-align:center; /* social의 가운데 정렬 */}
+        </style>
+    </head>
+    <body>
+        <!-- table(표) tr(줄) td(칸) -->
+        <div class="tbl">
+            <table>
+                <caption>전체게시물 수 : 1건입니다.</caption>
+                <tr>
+                    <th>게시물 번호</th>
+                    <th>게시물 제목</th>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                    <td>추천</td>
+                    <td>조회</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="left">
+                        <a href="">게시판 테스트입니다.</a>
+                    </td>
+                    <td>관리자</td>
+                    <td>2020.2.17</td>
+                    <td>10</td>
+                    <td>100</td>
+                </tr>
+            </table>
+        </div>
+        <div class="page">
+            <!-- 가운데 정렬 -->
+            <span class="num active">1</span>
+            <span class="num">2</span>
+            <span class="num">3</span>
+            <span class="num">4</span>
+            <span class="num">5</span>
+        </div>
+        <div class="btn">
+            <button class="write common">글쓰기</button>
+            <button class="list common">목록으로</button>
+        </div>
+
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.google.co.kr/" target="_blank">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="https://www.apple.com/kr" target="_blank">
+                <i class="fab fa-apple"></i>
+            </a>
+        </div>
+    </body>
+</html>
+
+<!--
+    메트릭스
+    table
+    reset.css 추가되는 내용
+    table(표)
+    tr(줄)
+    td(칸)
+-->

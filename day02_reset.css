@@ -1,0 +1,10 @@
+@charset 'utf-8';
+/* 주석을 포함한 내용들을 utf-8으로 보호 */
+
+/* 페이지 초기화 */
+* {
+    /* 항상 필요 */
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* 넓이에 두께를 포함 상단에 위치 */
+}

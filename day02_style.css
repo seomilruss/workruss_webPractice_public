@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+p:nth-child(1) {
+    /* p: first-child(1) - (부모자식 선택자) -> 첫번째 - 자식 */
+    background-color:#f00;
+}
+
+p:nth-child(2) {
+    /* p:last-child(2) -> 두번째 - 자식 */
+    color:#00f;
+}
+
+/*
+    HTML과 CSS를 분할
+    주석을 포함한 내용들을 utf-8으로 보호
+
+    .p1 { /* class 이름이 p1인 것을
+        background-color:#f00; /* 16진수 코드는 같은 것이 2개이상 반복되면 생략이 가능
+    }
+    .p2 { /* class 이름이 p2인 것을
+        color:#00f;
+    }
+*/
