@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>반응형사이트 예제</title>
+        <style>
+            * {
+                /* 화면 초기화 정말 중요함 */
+                margin:0; /* 바깥쪽 여백 0*/
+                padding:0; /* 안쪽 여백 0*/
+            }
+
+            div {
+                background-color:tomato;
+                color:#fff; /* 흰색(16진수 코드) 원칙은 #ffffff이지만 #fff로 생략이 가능 */
+                text-align:center; /* 가운데 정렬 */
+                height:400px; /* 높이 */
+                font-size:2.5px;
+                /*
+                    px를 rem으로 변환시키는 방법(px란? 고정된 페이지)
+                    px값을 16으로 나누면 된다.
+
+                    ▼ 예시
+                    40px / 16 = 2.5rem
+                    16px / 16 = 1rem
+                */
+            }
+            
+            img {
+                width:500px; /* 이미지 가로 설정 */
+                height:500px; /* 이미지 세로 설정 */
+                border-radius:50%; /* 가로 세로의 비율이 일정해야 한다. */
+            }
+
+            img:hover { /* 이미지 위에 마우스 커서를 올려놓으면 */
+                transform:scale(1.5); /* 현재 크기의 1.5배 */
+                transition:0.7s; /*서서히 이미지의 크기를 변경 */
+            }
+
+            /* 
+                media 기기 설정
+                800부터 600까지
+            */
+            @media(max-width:800px) {
+                /* 800 부터 600까지 */
+                div {
+                    background-color:blue;
+                    font-size:1.5625px;
+                    /* 25px / 16 = 1.5625rem(소수점 값중 소수점 5자리까지만 올려준다.) */
+                }
+            }
+            /* 600 이하는 */
+            @media(max-width:600px) {
+                div {
+                    background-color:purple;
+                    font-size: 1rem; /* 16px / 16 = 1rem */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!--
+                <div>는 media 쿼리의 영향을 받아서 색상이 변경됩니다.
+            -->
+            <a href="http://unsplash.com">
+                <img src="images/food.jpg" />
+            </a>
+            <a href="http://unsplash.com">
+                <img src="images/panda.jpg" />
+            </a>
+            <!--
+                <img src="주소 또는 경로" />
+                400x300(가로x세로) ?cook(?이미지 대상) - 인터넷을 기반으로 이미지를 지정
+                <a href="http:unsplash.com">
+                    <img src="https://source.unsplash.com/400x300/?mature?cook" />
+                </a> 
+            -->
+        </div> <!-- div (눈에 보이지 않음) 사각형 만들기 -->
+    </body>
+</html>
+
+<!--
+    res.com
+    1.res.html
+    2.저장
+    
+    반응형 디자인의 원리
+    반응형 사이트의 설정
+    1. viewport : 버전에 따라서 없는 경우도 있는데 유무에 따라서 글자의 크기가 달라진다.
+    2. @media query : 미디어 쿼리
+    글자의 크기는 rem : 1rem = 16px; - 글자의 크기 규칙
+    해상도의 순서대로
+    (max-width : 큰 것에서 작은 순으로[max 은 이하 라는 의미])
+    (min-width : 작은 것에서 큰 순으로[min 은 이상 이라는 의미])
+
+-->
