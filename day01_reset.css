@@ -1,0 +1,6 @@
+@charset 'utf-8';
+* { /* 화면 초기화 정말 중요함 */
+    margin:0; /* 바깥 여백을 지정 0 */
+    padding:0; /* 안쪽 여백을 지정 0 */
+    box-sizing:border-box;
+}
