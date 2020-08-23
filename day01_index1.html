@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko"><!-- 문자설정 한글은 ko 영어는 en-->
+    <head>
+        <meta charset="UTF-8"> <!-- charset은 언어(포멧)지정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- meta 환경설정
+            (viewport : 화면지정),
+            (content : 디바이스의 화면 크기에 최적화)
+            (initial-scale=1.0 은 화면의 크기를 지정 1.0은 원래크기를 의미함)
+        -->
+        <!-- meta -> 환경설정 및 웹사이트의 제목을 설정-->
+
+        <!-- 반응형 웹사이트 개발을 위한 설정 -->
+        <title>do_Naver</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!-- 글씨체 사용준비-->
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <style>/* CSS 디자인 */
+            * {
+                margin: 0; /* 바깥 여백을 지정 0 */
+                padding: 0; /* 안쪽 여백을 지정 0 */
+            }
+
+            a {
+                color: white; /* css에서 색을 설정 */
+                background-color: tomato; /* 문자에 배경색 지정 (16진수 적용가능)*/
+                text-decoration: none; /* css에서 밑줄을 설정 */
+                border-radius: 3px; /* 글자 모서리 라운딩*/
+                padding: 10px 50px; /* padding 두께값(아래 좌우)을 지정*/
+                font-family: 'Noto Sans KR', sans-serif; /* 폰트를 사용하기 위한 설정 */
+                font-size: 12px; /* 글자의 기본값은 16이므로 크게하려면 16이상으로 작게는 16이하로 */
+                display: inline-block; /* 배치 설정 - 원칙은 여백을 안줌*/
+            }
+
+            a:hover {
+                /* text-decoration : underline; /* 밑줄을 추가 */
+                /*  color : blue; /* 커서를 올리면 색상 변경*/
+                background-color: black; /* 문자에 배경색 지정 (16진수 적용가능)*/
+                transition: 0.8s; /* 색상 변경속도 0.1초에서 0.9초 까지*/
+            }
+        </style>
+    </head> 
+
+    <body>
+        <a href="https://www.naver.com" target="_blank">
+            <i class="fas fa-bars"></i>네이버<i class="fas fa-search"></i>
+        </a>
+        <!-- a태그 : 사용자의 편의성을 지원 -->
+    </body>
+</html>
+
+<!--
+    화면구현(화면 설계)이란?
+    디자인은 전용툴에서 작업을 진행한다.
+    디자인 전용툴은 브락켓 아톰 서브스탠스 등이 있다.
+
+    0. 개발도구(비쥬얼 스튜디오 코드) 다운로드
+    1. 개발도구 설치
+    2. 폴더 구조(워크스페이스)설정 + index.html파일을 저장
+    3. 아래의 폴더구조를 만듬
+
+    ▼ 폴더 기본구조
+    day01(프로젝트명)
+    index.html -> 파일이름.html(화면 설계)
+    - images : 사진(jpg, gif, png 이미지 파일)
+    css(디자인) : 화면 디자인
+    js : 움직임을 처리하는 javascript(jquery)
+
+    개발 Tip
+    자바와 HTML의 차이점 - 컴파일의 방식
+    자바와 같은 강형타입의 언어는 코드 전체를 컴파일을 하고 문법적 오류가 없어야 결과를 볼수 있지만,
+    HTML은 인터프리터 방식의 언어로 코드를 1줄 단위로 읽고 즉시 실행시키므로 심각한 오타가 아니면 결과가 나온다.
+
+    HTML 기본골격 자동완성  ->  html:5 + tab
+    컨트롤 +- 는 화면 크기조정
+
+    반응형 기본 상식
+    트리거(햄버거) 메뉴 -> 자바스크립트로 만든다.
+
+    ★반응형 해상도
+    스마트폰용 : i3(320px~420px)
+    탭용 : (~768px)
+    웹용 : (~1920px)
+    ◎일반적으로 위의 내용이 일반적이지만 임의로 추가하는 것도 가능하다.
+
+	반응형 사이트 : www.yes24.com - 너무 복잡한 작업은 곤란하다.
+
+	▼모바일과 일반 사이트의 차이점
+    https://m.yes24.com/ : 모바일
+    https://www.yes24.com/ : 웹
+-->

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update_Member</title>
+    <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montez|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-family: 'Montez', cursive;
+        }
+
+        a {
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            background-color: tomato;
+            color: #fff;
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+        }
+
+        a:hover {
+            background-color: transparent;
+            color: tomato;
+            transition: 0.5s;
+            border: 1px solid tomato;
+        }
+
+        input {
+            outLine: none;
+            padding: 0 5px;
+        }
+
+        @media (max-width:800px) {
+            a {
+                background-color: green;
+            }
+        }
+
+        @media (max-width:400px) {
+            a {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>정보수정</p>
+    <a href="unsplash.com"><i class="fas fa-id-card"></i>정보 수정</a><br />
+
+    <form action='do.jsp'>
+        성 별 : <input type="radio" name="gender" value="1"> 남자
+        <input type="radio" name="gender" value="2" checked> 여자<br />
+
+        지역을 선택하세요.<br />
+        <select>
+            <option>서울특별시</option>
+            <option selected>부산광역시</option>
+            <option>대구광역시</option>
+            <option>제주특별자치도</option>
+        </select>
+        <br /><br />
+
+        취미를 선택하세요.(다중선택 가능합니다.)<br />
+        <input type="checkbox"> 쇼핑
+        <input type="checkbox" checked> 독서
+        <input type="checkbox"> 낚시
+        <input type="checkbox"> 음악감상
+        <input type="checkbox" checked> 콘서트
+        <br /><br />
+
+        <input type="checkbox" checked> 위 내용에 동의하십니까?<br /><br />
+
+        <input type='reset' value="초기화">
+        <input type="submit" value="확인"><br /><br />
+    </form>
+</body>
+
+</html>

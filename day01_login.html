@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montez|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-family: 'Montez', cursive;
+        }
+
+        a {
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            background-color: tomato;
+            color: #fff;
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+        }
+
+        a:hover {
+            background-color: transparent;
+            color: tomato;
+            transition: 0.5s;
+            border: 1px solid tomato;
+        }
+
+        input {
+            outLine: none;
+            padding: 0 5px;
+        }
+
+        @media (max-width:800px) {
+            a { background-color: green; }
+        }
+
+        @media (max-width:400px) {
+            a { background-color: red; }
+        }
+    </style>
+</head>
+
+<body>
+    <p>Login Page</p>
+    <a href="unsplash.com"><i class="fas fa-id-card"></i>Log_in</a><br />
+
+    <form action='sum.jsp'>
+        아이디 : <input placeholder="아이디를 입력해주세요." type="text"><br />
+        비밀번호 : <input placeholder="비밀번호를 입력해주세요." type="password"><br />
+        <input type="reset" value="초기화">
+        <input type="submit" value="로그인"><br /><br />
+    </form>
+</body>
+
+</html>
