@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 웹사이트 샘플페이지</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap">
+        <link rel="stylesheet" href="css/day03_reset.css">
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <style>
+            body { /* 페이지 전체에 동일한 설정을 할 때 */
+                font-family:'Nanum Gothic', sans-serif; /* 나눔고딕 적용 */
+                font-size:0.875rem; /* 14px / 16 = 0.875rem - 폰트크기 적용 */
+                line-height:1.5; /* 현재 내 글자 크기에 150% 줄간격 */
+            }
+
+            a { text-decoration:none; /* 밑줄제거 */ }
+            main { display:flex; }
+
+            .left {
+                background-color: #ccc;
+                width:20%;
+                height:100vh;
+                padding:50px 3.125rem;
+                /* padding-top:50px; 위쪽 간격 */
+                text-align:center; /* 가운데 정렬 */
+                line-height: 2; /* 현재 글자크기의 2배 */
+            }
+
+            .right {
+                width:80%;
+                /* padding:50px 3.125rem; */
+                padding: 30px 3.125rem 50px 3.125rem;
+                /* 시계방향 */
+                line-height: 2.5;
+            }
+
+            img {
+                width:200px;
+                height:200px;
+                border-radius:50%;
+            }
+
+            i {
+                font-size:30px;
+                cursor:pointer;
+            }
+
+            i:nth-child(2) {
+                margin:0 20px; /* 아이콘 간격지정 */
+            }
+
+            i:hover {
+                color: tomato;
+                transition:0.5s;
+            }
+
+            .social { margin-top:20px; }
+            hr { margin: 50px 0; }
+            h3 { font-size:1.8rem; }
+            ul { margin-left:20px; }
+
+            @media (max-width:600px) {
+                main { display: block; }
+                .left, .right { width: 100%; }
+
+                .left {
+                    height:500px;
+                    background-color: #FAFAD2;
+                    font-size:1.3rem;
+                    font-weight:700;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="left">
+                <img src="images/panda.jpg" alt="tony stark">
+                <div class="area">부산, 대한민국</div>
+                <div class="email">pinkart@pinkart.co.kr</div>
+                <div class="social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <iframe src="http://pinkart.co.kr" width="150" height="500"></iframe>
+                <!-- iframe(Insert Frame) : 사이트 내부에 외부 사이트를 넣는 것 - 대형사이트는 iframe을 봉쇄함 -->
+            </article>
+            <article class="right">
+                <h3>Who am I?</h3>
+                <p>
+                    <mark>프론트엔드 웹 기술(Front-end web Tech)</mark>에 관심이 많습니다.
+                </p>
+                <p>현재 부산에서 코딩중입니다.</p>
+                <hr />
+                <h3>Experience</h3>
+                <ul>
+                    <li>프론트엔드 디자인</li>
+                    <li>웹 디자인</li>
+                    <li>벡엔드 개발자</li>
+                </ul>
+            </article>
+        </main>
+    </body>
+</html>
+
+<!--
+    반응형 웹의 궁극적인 목표는 스마트폰이다.
+    그러므로 스마트폰 에서의 테스트가 중요하다.
+    
+    ctrl + shift + p → (비쥬얼스튜디오코드에서) beautify.file + 클릭 = 코드 자동정렬
+
+    target 속성들
+    _blank : 링크 내용이 새 창이나 새탭에서 열림
+    _self : target 속성의 기본 값으로 링크가 있는 화면에서 새로 열립니다.
+    _parent : 프레임을 사용했을 때 링크 내용을 부모 프레임에 표시합니다.
+    _top : 프레임을 사용했을 때 프레임에서 벗어나 링크의 내용을 전체 화면에 표시합니다.
+
+    class는 . 으로 해서 디자인을 한다.
+    id는 #으로 해서 움직임을 준다.
+-->

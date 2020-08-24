@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SNS 서비스 이용률</title>
+        <link rel="stylesheet" href="css/day03_reset.css">
+        <style>
+            table {
+                width:80%;
+                border-collapse:collapse;
+                border:2px solid #ccc;
+                font-size:14px;
+            }
+
+            th { padding: 10px 0; }
+
+            td {
+                border:1px solid #ccc;
+                padding:10px 0;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <caption>주요SNS서비스 이용률(%)</caption>
+            <tr>
+                <th></th>
+                <th>페이스북</th>
+                <th>카카오스토리</th>
+                <th>밴드</th>
+                <th>인스타그램</th>
+                <th>트위터</th>
+            </tr>
+            <tr>
+                <th>2015년</th>
+                <th>77.1</th>
+                <th>58.3</th>
+                <th>32.4</th>
+                <th>16.7</th>
+                <th>22.1</th>
+            </tr>
+            <tr>
+                <th>2016년</th>
+                <th>73.8</th>
+                <th>51.0</th>
+                <th>40.1</th>
+                <th>28.1</th>
+                <th>14.7</th>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--
+    img(이미지)
+    gif는 이미지를 동적으로 하지만 라이센스가 있으므로 회사들이 사용을 하지않음.
+    JPG 손실압축방식으로 용량을 줄이지만 화질이 감소한다.
+    PNG 화질과 용량은 그대로지만 배경을 투명하게 설정할 수 있으며 로고에 적합하다.
+
+    이미지 삽입
+    1. <img> - 이미지 위에 글자를 겹칠 수 없음
+    2. background-image : 이미지 위에 글자를 겹칠 수 있음
+
+    alt는 이미지 대신에 글자를 표시
+    title : 이미지에 마우스를 올려놓으면 글자가 출력
+
+    파일의 경로는 정말 중요하다.
+
+    img 태그를 사용시
+    인라인 방식을 권장하지 않고 아웃라인 방식을 권장함.
+
+    ▼ 인라인 방식
+    <img src="" width=200px, height=200px>
+    ▼ 아웃라인 방식
+    img {
+        width:200px;
+        height:200px;
+    }
+
+    그림판은 지원하지 않으므로 포토샵을 활용하는 것이 좋다.
+    figuer는 caption과 같음
+-->

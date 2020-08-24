@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블 만들기 최종</title>
+        <link rel="stylesheet" href="css/day03_reset.css">
+        <style>
+            table {
+                width:80%; /* 모니터 전체 크기의 80% */
+                border-collapse:collapse; /* 테두리 제거 */
+                border:2px solid #ccc; /* 테두리 색상 */
+                font-size:14px; /* 폰트크기 */
+            }
+
+            thead { background-color:#eee; /* 빛의 3원색 - r(ff) g(ff) b(ff) */ }
+            th { padding: 10px 0; }
+            td {
+                border:1px solid #ccc;
+                padding:10px 0;
+                text-align:center;
+            }
+            h1 {
+                text-transform:uppercase;
+                text-align:center;
+                text-shadow:2px 2px 2px #f00; /* shadow 는 잘 사용하지 않음 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student List(학생 리스트)</h1>
+        <table border="1">
+            <caption>학력사항</caption>
+            <thead>
+                <tr>
+                    <th>출신학교</th>
+                    <th>전공</th>
+                    <th>기간</th>
+                    <th>구분</th>
+                </tr>
+                <tr>
+                    <th>부산대학교</th>
+                    <th>컴퓨터공학과</th>
+                    <th>2014.10.10</th>
+                    <th>졸업</th>
+                </tr>
+                <tr>
+                    <td>경성대학교</td>
+                    <td>경영학과</td>
+                    <td>2020.02</td>
+                    <td>재학중</td>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
+
+<!-- % 나머지를 구해서 디자인에 활용가능 -->

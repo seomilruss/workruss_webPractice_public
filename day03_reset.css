@@ -1,0 +1,16 @@
+@charset 'utf-8';
+/* 주석을 포함한 내용들을 utf-8으로 보호 */
+
+/* 페이지 초기화 */
+* {
+    /* 항상 필요 */
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* 넓이에 두께를 포함 상단에 위치 */
+    /*
+        width : 100 + 1 = 102px 가되고 계산이 어려워짐
+        border-box를 적용시 98 + 2(두께값) = 100px
+
+        padding을 사용시 무조건 box-sizing
+    */
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchor(찾아가기) 예제</title>
+        <link rel="stylesheet" href="css/day03_reset.css">
+        <style>
+            header { height:500px; /* 높이 설정 */ }
+            .one {
+                height:700px; /* 높이 설정 */
+                background-color:#ccc; /* 배경색 지정 */
+            }
+
+            .two { height:700px; /* 높이 설정 */}
+
+            footer {
+                height:700px; /* 높이 설정 */
+                background-color:#000; /* 배경색 지정 */
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul id="menu">
+                <li><a href="#company">Company</a></li> <!-- company를 누르는 순간 company인 곳으로 화면 전환 -->
+                <li><a href="#portfolio">Portfolio</a></li> <!-- portfolio를 누르는 순간 id가 portfolio인 곳으로 화면을 전환 -->
+                <li><a href="#copylight">Copyright</a></li> <!-- copylight를 누르는 순간 copylight인 곳으로 화면을 전환 -->
+            </ul>
+        </header>
+        <main>
+            <article class="one" id="company">company 내용입력</article>
+            <article class="two" id="portfolio">portfolio 내용입력</article>
+        </main>
+        <footer id="copylight">카피라이터</footer>
+    </body>
+</html>
