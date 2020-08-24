@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML5 입력폼 만들기_138Page</title>
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/reset.css">
+
+        <style>
+            ul li {
+                list-style:none; /* list에 생기는 점이라는 스타일을 제거 */
+                margin:20px;
+            }
+
+            label {
+                width:80px; /* 인라인 방식이므로 높이가 적용되지 않음 */
+                display:inline-block; /* 인라인 블록으로 변환이 필요 */
+                text-align:right; /* center 보다는 right를 선호 */
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" name="f" action="save.jsp">
+            <fieldset>
+                <legend>로그인 박스</legend>
+                <ul>
+                    <li>
+                        <label for="userid"><i class="fas fa-id-card"></i>UserID</label>
+                        <input type="text" id="userid">
+                        <!-- &nbsp로 맞출수 있지만 center로 맞춤 -->
+                    </li>
+                    <li>
+                        <label for="pwd"><i class="fas fa-lock"></i>Passwd</label>
+                        <input type="password" id="pwd">
+                    </li>
+                </ul>
+            </fieldset>
+            <h3>수강분야</h3>
+            <ul>
+                <li>
+                    <label for="">
+                        <input type="checkbox" value="grm"><i class="fas fa-spell-check"></i>문법
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input type="checkbox" value="wr"><i class="far fa-file-woed"></i>작문
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input type="checkbox" value="rd"><i class="fab fa-readme"></i>독해
+                    </label>
+                </li>
+            </ul>
+            <h3>수강과목(1과목만 선택 가능)</h3>
+            <ul>
+                <li>
+                    <input type="radio" name="subject" value="eng"><i class="fas fa-usa"></i>영어회화
+                </li>
+                <li>
+                    <input type="radio" name="subject" value="ch"><i class="far fa-comments"></i>중국어회화
+                </li>
+                <li>
+                    <input type="radio" name="subject" value="jp"><i class="far fa-comments"></i>일본어회화
+                </li>
+
+                <!-- <input type="hidden" value="sumResult"> 아이디는 가능하지만 비밀번호는 보안의 문제를 만들수 있음 -->
+                <input type="file">첨부파일을 선택해주세요.
+                <button>버튼</button> <!-- html5 부터 -->
+                <input type="submit" value="input"> <!-- 이전부터 사용 / 클릭 또는 엔터를 해야 함 -->
+                <input type="button" value="button"> <!-- 클릭을 해야만 함 -->
+                <input type="reset" value="새로고침"> <!-- 버튼들은 form태그 내부에 위치해야함 -->
+                <!-- <input 타입은 form 태그로 감싸줘야 한다. -->
+
+                아이디는 12자리까지만 입력하세요.
+                <input type="txt" readonly value="12345" size="50"> <!-- 디자인 맞추기용 _ maxlength : 입력제한 / size : 입력받는 공간의 크기 -->
+                <!--
+                    value에 값을 주는 것은 초기값을 지정해야 하는 경우
+                    readonly 읽기 전용 값을 확인시 변경하지 않을 값들을 보호
+                -->
+            </ul>
+        </form>
+        <!-- 2줄을 만들어야 하므로 블럭타입이 적합함 -->
+    </body>
+</html>
+
+<!--
+    HTML
+    인라인타입(inline) - span, i, img, a, form, input...
+    내용만큼만 공간을 차지함.
+
+    블럭타입(block)
+    - 내용이 적어도 무조건 한줄을 다 차지하기
+    - padding, width, height 정확하게 설정이 안됨(변환작업이 필요)
+
+    HTML은 배경을 무조건 넣어야 공간이 어떻게 되는지 볼수 있다.
+    hidden : 사용자에게는 보이지는 않지만 서버로 넘겨지는 값을 가짐
+-->

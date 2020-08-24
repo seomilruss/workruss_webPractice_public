@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>t_code</title>
+        <link rel="stylesheet" href="css/reset.css">
+
+        <script>
+            function check() {
+                if (!document.f.name.value) {
+                    alert("이름을 입력하세요.");
+                    document.f.name.focus();
+                    return false;
+                }
+
+                /*
+                if (document.f.name.value == "") {
+                    alert("이름을 입력해주세요.");
+                    document.f.name.focus();
+                    return false;
+                }
+                */
+                if (document.f.pwd1.value !=
+                    document.f.pwd2.value) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    document.f.pwd1.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body onsubmit="return check();">
+        <form method="post" name="f">
+            이름<input type="text" name="name"><br />
+            비밀번호<input type="text" name="pwd1"><br />
+            비밀번호 확인<input type="text" name="pwd2">
+
+            <input type="submit" value="주문하기">
+            <input type="submit" value="취소하기">
+    </body>
+</html>
+
+<!--
+    1.Java
+    2.HTML,CSS,JQuery - 화면
+    3.database
+    4.Web Programming
+ -->

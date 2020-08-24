@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>inline, block 타입의 차이</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            span {
+                background-color:#f00;
+                padding:30px;
+                /* display:inline; -> padding, 넓이 높이 설정이 안됨 */
+                display:inline-block;
+                /* inline-block로 변환작업이 필요 */
+            }
+
+            div { background-color:#00f; }
+        </style>
+    </head>
+    <body>
+        <span>메뉴1-1</span>
+        <span>메뉴1-2</span>
+        <span>메뉴1-3</span>
+        <span>메뉴2-1</span>
+        <span>메뉴2-2</span>
+        <span>메뉴2-3</span>
+    </body>
+</html>
+<!-- 폼과 관련된 것들은 대부분 inline방식이므로 다닥다닥 1줄으로 붙어서 나온다. -->

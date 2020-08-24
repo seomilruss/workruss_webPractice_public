@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itemOrder</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            ul li {
+                list-style:none;
+                margin-left:30px;
+            }
+
+            label {
+                width:180px;
+                display:inline-block;
+                text-align:center;
+                margin-top:5px 0;
+                margin-left:3px;
+                margin-bottom:5px;
+                color:blue;
+            }
+
+            .label1 {
+                text-align: left;
+                color:blueviolet;
+            }
+
+            h1 { text-align:left; }
+
+            .inputgroup {
+                display:inline-block;
+                text-align:left;
+                margin-right:10px;
+            }
+
+            .box {
+                border:1px solid #ccc;
+                width:500px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                text-align:left;
+                padding:50px;
+            }
+
+            .box {
+                border:1px solid #ccc;
+                width:500px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                text-align: left;
+                padding:50px;
+            }
+
+            #button1 { margin-left:130px; }
+            /* .memo { vertical-align:top; }*/
+        </style>
+        
+        <script>
+            function check() {
+                if (!document.f.name.value) {
+                    alert("이름을 입력하세요.");
+                    document.f.name.focus();
+                    return false;
+                }
+                if (!document.f.pwd1.value) {
+                    alert("비밀번호를 입력하세요.");
+                    document.f.name.focus();
+                    return false;
+                }
+                /*
+                if (document.f.name.value == "") {
+                    alert("이름을 입력하세요.");
+                    document.f.name.focus();
+                    return false;
+                }
+                */
+                if (document.f.pwd1.value !=
+                    document.f.pwd2.value) {
+                        alert("비밀번호가 일치하지 않습니다.");
+                        document.f.pwd1.focus();
+                        return false;
+                    }
+            }
+        </script>
+    </head>
+    <body onsubmit="return check()">
+        <div class="box">
+            <form method="post" name="f">
+                <h1>상품주문서</h1>
+                <fieldset>
+                    <legend class="label1">개인 정보</legend>
+                    <ul>
+                        <li>
+                            <label for="uName">이름</label>
+                            <input class="inputgroup" type="text" id="uName" name="name" size="10" id="uName"><br />
+                        </li>
+                        <li>
+                            <label for="uPw">비밀번호</label>
+                            <input type="text" id="uPw" name="pwd1">
+                        </li>
+                        <li>
+                            <label for="uPwck">비밀번호 확인</label>
+                            <input type="text" name="pwd2">
+                        </li>
+                        <li>
+                            <label for="uTel">연락처</label>
+                            <input class="inputgroup" type="text" name="tel" size="10" id="uTel">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="label1">배송지 정보</legend>
+                    <ul>
+                        <li>
+                            <label for="uAdr">주소</label>
+                            <input class="inputgroup" type="text" id="uAdr">
+                        </li>
+                        <li>
+                            <label for="uTel">전화번호</label>
+                            <input class="inputgroup" type="text" size="10" id="uTel">
+                        </li>
+                        <li>
+                            <label class="memo">메모</label>
+                            <textarea cols="40" rows="3"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="label1">주문 정보</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox">과테말라 안티구아(100g)
+                            <input type="text" value="0" size="5">개
+                        </li>
+                        <li>
+                            <input type="checkbox">인도네시아 만델링(100g)
+                            <input type="text" value="0" size="5">개
+                        </li>
+                        <li>
+                            <input type="checkbox">탐라는도다(블렌딩)(100g)
+                            <input type="text" value="0" size="5">개
+                        </li>
+                    </ul>
+                </fieldset>
+                <input id="button1" type="submit" value="주문하기">
+                <input id="button2" type="reset" value="다시작성">
+            </form>
+        </div>
+    </body>
+</html>
+
+<!--
+    169 페이지
+
+    주문하기 버튼을 누르면 이름, 연락처에 값이 없을 때
+
+    <script>
+        function 이름() {
+            if
+            alert("이름을 확인하세요");
+        }
+    </script>
+
+    id: jquery
+    class: 디자인
+    name: 자바스크립트
+
+    이름: <input type="text" name="name">
+    연락처 : <input type="text" name="tel">
+
+    인라인 스타일 시트
+-->
