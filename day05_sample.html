@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            .container {
+                width:800px;
+                height:1000px;
+                border:1px;
+                margin:0 auto;
+                /* div를 화면 가운데 정렬 */
+            }
+
+            table { width:100%; }
+            td:first-child { width:25%; }
+            td:last-child { width:75%; }
+            hr { background:#00f; }
+            td:nth-child(1),
+            td:nth-child(3) { width:15%; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br />
+            <hr />
+            <br />
+
+            <table border="1">
+                <tr>
+                    <td colspan="4">회원가입 입력폼</td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text"></td>
+                    <td>비밀번호</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+            </table>
+            <br />
+            <br />
+        </div>
+    </body>
+</html>

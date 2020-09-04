@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itemOrder</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            body {
+                background-color:#fff;
+                font-family: 'Open Sans', sans-serif;
+                /* 화면애 설정하는 값 - 미지정시 16 */
+            }
+            
+            .container { /* 로그인 박스 크기 */
+                display:block;
+                width:600px;
+                height:420px;
+                background-color:#fff;
+                padding:40px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+            }
+
+            h1 {
+                text-transform:uppercase; /* 문자를 대문자로 전환 */
+                color:#414141; /* 문자 색 */
+                font-size:25px; /* 문자 크기 */
+                margin-bottom:15px;
+            }
+
+            input { /* display:block; 블록타입은 1줄으로 만듬 */ } 
+
+            input:first-child { /* 첫번째 input */ }
+
+            a { /* a도 인라인 타입이라서 공간이 있으면 옆에 붙는다. */
+                display:block; /* a가 1줄을 다 사용함 */
+                text-decoration:none;
+                text-transform:uppercase;
+                font-weight:300; /* 300 */
+                color:#858585; /* 색지정 */
+                text-align:center; /* 중앙으로 */
+                padding:30px 0; /* 아래위로 20px */
+            }
+            
+            button {
+                width:70px; /* (250 * 2) */
+                height:30px; /* (250 * 2) */
+                text-transform: uppercase; /* 대문자 전환 */
+                cursor:pointer; /* link설정(손가락) */
+                font-family: 'Open Sans', sans-serif; /* input 내부는 다시 글씨체를 설정해줘야 함*/
+                float: none; /* 가로배치 */
+            }
+
+            legend {
+                text-align:left;
+                color:blueviolet;
+            }
+
+            .inputgroup {
+                margin-top:10px;
+                margin-left:60px;
+                margin-bottom:10px;
+            }
+
+            .checkgroup {
+                margin-top:10px;
+                margin-left:60px;
+                margin-bottom:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>상품 주문서</h1>
+            <form name="f">
+                <fieldset>
+                    <legend>개인정보</legend>
+                    이름<input class="inputgroup" type="text"><br />
+                    연락처<input class="inputgroup" type="text"><br />
+                </fieldset>
+                <fieldset>
+                    <legend>배송지 정보</legend>
+                    주소<input class="inputgroup" type="text"><br />
+                    전화번호<input class="inputgroup" type="text"><br />
+                    메모<textarea class="inputgroup" cols="40" rows="3"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>주문 정보</legend>
+                    <input class="checkgroup" type="checkbox">과테말라 안티구아(100g)
+                    <input type="text">개<br />
+                    <input class="checkgroup" type="checkbox">인도네시아 만델링(100g)
+                    <input type="text">개<br />
+                    <input class="checkgroup" type="checkbox">탐라는도다(블렌딩)(100g)
+                    <input type="text">개<br />
+                </fieldset>
+                <button type="button" class="doOlder">주문하기</button>
+                <button type="button" class="reWrite">다시작성</button>
+            </form>
+        </div>
+    </body>
+</html>
+
+<!--
+    <p class="p" id="p">
+    .p{ } - 디자인 - ID 선택자
+    #p{ } - JQuery - Class 선택자
+-->

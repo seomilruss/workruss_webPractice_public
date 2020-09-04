@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>다해줌! 메이크샵!</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            img { width:900px; }
+            .container {
+                width:700px;
+                height:420px;
+                background-color:#fff;
+
+                padding:0;
+                position:absolute;
+                top:3%;
+                left: 25%;
+                transform: translate(-50, -50);
+            }
+            body { background-color:#fff; }
+
+            button {
+                width:190px; /* (250 * 2) */
+                height:50px; /* (250 * 2) */
+                border:none; /* 불필요한 보더설정 제거 */
+                color:#fff; /* 색상 */
+                text-transform:uppercase; /* 대문자 전환 */
+                cursor:pointer; /* link 설정(손가락) */
+                font-family: 'Open Sans', sans-serif; /* input 내부는 다시 글씨를 재설정 해줘야 함 */
+                float: left; /* 가로배치 */
+            }
+
+            .agreeJoin { background-color:blue; }
+            p { margin-left: 50px; }
+            h1 { color: blue; }
+        </style>
+    </head>
+    <body>
+        <div class="lay-out">
+            <div class="container">
+                <from name="f">
+                    <h1>본인인증</h1>
+                    메이크샵 다해줌을 위한 본인 인증을 진행합니다. (법적 의무조항)
+                    <img src="images/selfcheck.PNG" alt="본인인증">
+                    <p>
+                        * 메이크샵은 온라인상의 안전하고 건전한 서비스 이용을 위하여, "휴대폰/아이핀"을 통해 본인실명인증을 진행하고 있습니다.<br />
+                        * 타인의 정보를 도용하실 경우 3년 이하의 징역 또는 천만원 이하의 벌금에 처하게 됩니다.<br />
+                        * 개정된 전자상거래법의 '호스팅 사업자' 신원확인의무에 의거 신원확인을 위하여 대표자의 정보로 회원가입을 하시기 바랍니다.<br />
+                        (전자상거래법 개정안 제 11조 2항 의거)<br />
+                        * 메이크샵은 만 14세 미만 미성년자의 회원가입을 받지 않습니다.<br />
+                    </p>
+                    <h1>필수정보 입력</h1>
+                    메이크샵 회원가입을 위해 필요한 필수 입력정보 항목입니다.<br />
+                    쇼핑몰 대표자 정보로 정확히 입력 해주세요.
+                    <table border="0">
+                        <tr>
+                            <th>아이디</th>
+                            <td colspan="3"><input type="text"> 10자리이하 영문(소문자), 숫자로만 작성</td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td colspan="4"> <input type="text"> 영문, 숫자를 혼용하여 10~12자리 비밀번호 확인 <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td><input type="text">@<input type="text"> <input type="text" placeholder="직접입력"><br />비밀번호 분실 시,
+                                임시비밀번호가 발급되는 정보입니다.<br />쇼핑몰 대표자 정보로 정확히 입력하시기 바랍니다.</td>
+                        </tr>
+                        <tr>
+                            <th>휴대폰</th>
+                            <td colspan="3"><input type="text" size="10">-<input type="text" size="10">-<input type="text"
+                                    size="10">대표자 명의의 휴대폰번호를 입력하시기 바랍니다.<br />비밀번호 분실 시, 임시비밀번호가 발급되는 정보입니다.<br />쇼핑몰 대표자 정보로
+                                정확히
+                                입력하시기 바랍니다.</td>
+                        </tr>
+                    </table><br /><br />
+
+                    <table border="0">
+                        <tr>
+                            <th>전체동의</th><td></td>
+                        </tr>
+                        <tr>
+                            <td>메이크샵 통합회원약관(필수)<input type="button" value="내용보기"></td>
+                            <td>메이크샵 이용약관(필수)<input type="button" value="내용보기"></td>
+                        </tr>
+                        <tr>
+                            <td>개인정보 수집, 이용동의(필수)<input type="button" value="내용보기"></td>
+                            <td>메이크샵 이용약관(필수)<input type="button" value="내용보기"></td>
+                        </tr>
+                        <tr>
+                            <td>개인정보 수집, 이용동의(필수)</td>
+                            <td>개인정보 수집, 이용약관(선택)</td>
+                        </tr>
+                        <tr>
+                            <td>마케팅 수신동의(이메일, SNS)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>＊쇼핑몰 운영에 필요한 다양한 정보를 보내 드리겠습니다!<br />＊제공 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다. </td>
+                            <td></td>
+                        </tr>
+                    </table><br /><br />
+                    <button type="button" class="agreeJoin">동의하고 가입완료</button>
+                </from>
+            </div>
+        </div>
+    </body>
+</html>

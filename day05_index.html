@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Box</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style_day5.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style_day5.css">
+        <script src="js/js.js"></script>
+    </head>
+    <body onsubmit="return loginCheck();"> <!-- onsubmit="return loginCheck();" 연결 -->
+        <div class="container"> <!-- "container(담는 것)" + "class=wrap(감싸는 것)" -> 전체를 감싸서 담는 사각형 -->
+            <h1>login</h1>
+            <form name="f"> <!-- name(js) class(database) id(jq) -->
+                <input type="text" name="email" placeholder="email" /> <!-- <br /> 줄바꿈 --> <!-- inline 타입은 남는 공간이 있다고 인지해서 <br /> 하기 전까지 계속 붙여줌 -->
+                <input type="password" name="pwd" placeholder="password" />
+                <a href="forgot.html" target="_blank">
+                    Forgot your password?
+                </a>
+                <button type="button" class="register">register</button>
+                <button type="submit" class="signin">signin</button>
+            </form>
+        </div>
+    </body>
+</html>
+
+<!--
+    html css 는 타깃페이지를 설정하고 똑같이 만들어보기
+
+    업무시 폴더구조
+    css
+    images
+    js
+    psd
+    svg
+    fonts
+
+    open sans(san serif)글씨체
+
+    jquery.html
+    jquery -> javascript 코드이 양을 줄여서 사용
+    document.f.email.value
+    $(.'email').value();
+
+    팀워크
+    프로젝트
+
+    1-5-4-3-2 장순으로 공부
+    기출많이 된 것, 중요한 것
+
+    유튜브 -> java mini project -> 똑같이 만들기
+
+    과제는 회원가입
+
+    169Page 코드를 변형해보기
+
+-->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Box</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style_day5.css">
+        <script src="http://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                crossorigin="anonymous"
+            >
+        </script>
+        <!-- J쿼리 코드 1줄이 있어야 J쿼리를 활용가능 -->
+        <script>
+            $(function () {
+                $('#jpwd').mousedown(function() { // 비밀번호란을 클릭하면
+                    if( $('#jemail').val() == "") {
+                        alert("이메일을 입력해주세요!");
+                        $('#jemail').focus();
+                        return false;
+                    }
+
+                    $('#insEmail').html("<b><i>사용가능</i></b>"); /* html 을 쓰면 스타일을 적용해서 출력이 가능하다. */
+                    // $('#insEmail').text("사용가능"); /* text는 일반적인 출력 */
+                });
+            });
+        </script>
+    </head>
+    <body> <!-- onsubmit="return loginCheck();" 연결 -->
+        <div class="container"> <!-- "container(담는것)" + "class=wrap(감싸는 것)" -> 전체를 감싸서 담는 사각형 -->
+            <h1>login</h1>
+            <form name="f"> <!-- name(js) class(d) id(jq) -->
+                <input type="text" id="jemail" name="email" placeholder="email" />
+                <span id="insEmail"></span><!-- span 값은 비워둠 --> <!-- <br /> 줄바꿈 --> <!-- 인라인 타입은 남는 공간이 있다고 인지해서 <br /> 을 하기 전까지 계속 붙임 -->
+                <input type="password" id="jpwd" name="pwd" placeholder="password" />
+                <a href="forgot.html" target="_blank">
+                    Forgot your password?
+                </a>
+                <button type="button" class="register">register</button> <!-- button 타입의 유무로 버튼 선택 제한가능 -->
+                <button type="submit" class="signin">signin</button>
+            </form>
+        </div>
+    </body>
+</html>
