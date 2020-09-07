@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>회원가입</title>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&dispaly=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+
+        <style>
+            body {
+                font-family: 'Nanum Ghothic', sans-serif;
+                font-size:14px;
+            }
+            table { /* table 초기화 */
+                border-collapse:collapse;
+                width:100%;
+                border:2px solid #b8cad6;
+            }
+            .container {
+                width:1100px; /* border:1px solid #ccc; 컨테이너 크기 확인 */
+                margin:50px auto;
+                /*
+                    내용물만 가운데 정렬 : text-align
+                    div 같은 사각형을 화면 가운데로 보낼 때 margin:0 auto;
+                */    
+            }
+            /* 자주, 여러번 사용하는 기능은 별도의 클래스로 만들어두기 */
+            .bg-tomato {
+                background-color:tomato; /* 배경색 */
+                color:#fff; /* 색상 */
+            }
+            .p-td-10 { padding:10px 0; } /* 위 아래 패딩 작업 */
+            .p-td-20 { padding:20px 0; } /* 좌우 패딩 작업 */
+            .m-t-5 { margin-top:5px; }
+            .clr-bg-gray { background-color:#f7f7f7; }
+            .w-15 { width:15%; } /* 테이블 width 15 5개 */
+            .w-35 { width:35%; } /* 테이블 width 35 2개 */
+            .w-85 { width:85%; }
+            .tr-h { height:40px; }
+            .align { text-align:center; }
+            .bold { font-weight:700; } /* 무조건 진하게 */
+            .input {
+                width:150px;
+                height:30px;
+                padding:0 5px;
+                margin-left:5px;
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+            .input {
+                width:150px;
+                height:30px;
+                padding:0 5px;
+                margin-left:5px;
+                font-family:'Nanum Gothic', sans-serif;
+            }
+            .input-hp {
+                width:80px;
+                height:30px;
+                padding:0 5px;
+                font-family:'Nanum Gothic', sans-serif;
+            }
+            .txt {
+                font-size:12px;
+                margin-left:5px;
+            }
+            .s-emil {
+                width:150px;
+                height:30px;
+                font-family:'Nanum Gothic', sans-serif;
+                margin-left:5px;
+            }
+            .clr-red { color:#f00; }
+            /* 자주, 여러번 사용하는 기능은 별도의 class를 만들어 두기 --- 끝 */
+            td { border:1px solid #dddee0; } /* 테이블 안쪽에 선 그리기 */
+            h3 {
+                color:#2868de;
+                margin-bottom:5px;
+            }
+            .sub {
+                margin-bottom:10px;
+                font-size:12px;
+            }
+            hr {
+                margin:20px 0;
+                border:0;
+                border-top:5px solid #2868de;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"><!-- 전체내용을 한번에 가운데 정렬 -->
+            <h3>필수정보 입력</h3>
+            <p class="sub">
+                메이크샵 회원가입을 위해 필요한 필수 입력정보 항목입니다.
+                쇼핑몰 대표자 정보로 정확히 입력해주세요.
+            </p>
+            <table>
+                <tr class="tr-h">
+                    <td class="bold w-15 clr-bg-gray align">아이디</td>
+                    <td colspan="3">
+                        <input type="text" name="userid" class="input">
+                        <span class="text">10자리 이하 영문(소문자), 숫자로만 작성</span>
+                    </td>
+                </tr>
+                <tr class="tr-h">
+                    <td class="w-15 bold clr-bg-gray align">비밀번호</td>
+                    <td class="w-35">
+                        <input type="password" name="pwd1" class="input">
+                        <span class="text">영문자, 숫자를 혼용하여 10~12자리</span>
+                    </td>
+                    <td class="w-15 bold clr-bg-gray align">비밀번호 확인</td>
+                    <td class="w-35">
+                        <input type="password" name="pwd2" class="input">
+                        <span class="text">영문, 숫자를 혼용하요 10~12자리</span>
+                    </td>
+                </tr>
+                <tr class="tr-h">
+                    <td class="bold w-15 clr-bg-gray align">이메일</td>
+                    <td colspan="3" class="p-tb-10">
+                        <input type="text" name="" class="input">@
+                        <input type="text" name="" class="input">
+                        <select class="s-email">
+                            <option>직접입력</option>
+                            <option>네이버</option>
+                        </select>
+                        <p class="txt clr-red m-t-5">
+                            비밀번호 분실 시, 임시비밀번호가 발급되는 정보입니다.
+                            쇼핑몰 대표자 정보로 정확히 입력하시기 바랍니다.
+                        </p>
+                    </td>
+                </tr>
+                <tr class="tr-h">
+                    <td class="bold w-15 clr-bg-gray align">휴대전화</td>
+                    <td colspan="3" class="p-tb-10">
+                        <select class="s-tel">
+                            <option>010</option>
+                            <option>011</option>
+                        </select> -
+                        <input type="text" class="input-hp" maxlength="4" name=""> -
+                        <input type="text" class="input-hp" maxlength="4" name="">
+                        <span class="text">대표자 명의으 휴대폰번호를 입력하시기 바랍니다.</span>
+                        <p class="text clr-red m-t-5">
+                            비밀번호 분실 시, 임시비밀번호가 발급되는 정보입니다.
+                            쇼핑몰 대표자 정보로 정확히 입력하시기 바랍니다.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <hr />
+            <table>
+                <tr class="tr-h">
+                    <th colspan="2" class="bold w-15 clr-bg-gray"><input type="checkbox">전체동의</th>
+                </tr>
+                <tr class="tr-h">
+                    <td class="w-15"><input type="checkbox">메이크샵 통합회원약관(필수) <input type="button" value="내용보기"></td>
+                    <td class="w-15"><input type="checkbox">메이크샵 이용약관(필수)<input type="button" value="내용보기"></td>
+                </tr>
+                <tr class="tr-h">
+                    <td class="w-15"><input type="checkbox">개인정보 수집, 이용동의(필수) <input type="button" value="내용보기"></td>
+                    <td class="w-15"><input type="checkbox">개인정보 수집, 이용동의(선택) <input type="buttpn" value="내용보기"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="w-15"><input type="checkbox">마케팅 수신동의(이메일, SNS)<input type="button" value="내용보기">
+                        <p>
+                            1. 쇼핑몰 운영에 필요한 다양한 정보를 보내 드리겠습니다!<br />
+                            2. 제공에 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <input type="button" value="동의하고 가입완료">
+        </div>
+    </body>
+</html>

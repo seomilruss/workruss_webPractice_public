@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>naver_Login</title>
+        <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            body { background-color:#F5F6F8; }
+            .container {
+                width:450px; /* border:1px solid red; */
+                margin:50px auto;
+            }
+            .lang_select {
+                width:100px;
+                height:30px;
+                margin-left:500px;
+                margin-bottom:50px;
+            }
+            .logo_png {
+                width:75%;
+                height:74px;
+                background-image:url(images/naverLogo.png);
+                background-size:cover;
+                background-repeat:no-repeat;
+                margin-left:45px;
+            }
+            .notice_image {
+                width:75%;
+                height:74px;
+                background-image:url(images/notice.png);
+                /* background-size:cover; */
+                background-repeat:no-repeat;
+                margin-left:95px;
+            }
+            .check_image {
+                width:150%;
+                height:200px;
+                background-image:url(images/check.png);
+                /* background-size:cover; */
+                background-repeat:no-repeat;
+                margin-right:initial;
+            }
+            .input_group {
+                width:400px;
+                height:40px;
+                margin:15px;
+            }
+            #n_button {
+                width:400px;
+                height:40px;
+                text-align:center;
+                background-color:#03c75B;
+                border:none; /* 불필요한 border 설정을 제거 */
+                color:#fff;
+                cursor:pointer;
+                margin:17px;
+            }
+            #state { color:#00C84C; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <select class="lang_select">
+                <option value>한국어</option>
+                <option>영어</option>
+                <option>中文(简体)</option>
+                <option>中文(台灣)</option>
+            </select>
+
+            <div class="logo_png"></div>
+            <br />
+            <div class="value_form">
+                <input class="input_group" type="text" placeholder="아이디" />
+                <br />
+                <input class="input_group" type="password" placeholder="비밀번호" />
+                <br />
+                <input id="n_button" type="button" value="로그인" />
+                <br />
+                <input type="checkbox">로그인 상태유지
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <span>IP보안</span><span id="state">ON</span>
+
+                <span>일회용 로그인</span>
+                <br />
+                <div class="notice_image"></div>
+                <hr /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a>아이디 찾기</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+                <a>비밀번호 찾기</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+                <a>회원가입</a><br /><br /><br /><br />
+                <div class="check_image"></div>
+            </div>
+        </div>
+    </body>
+</html>

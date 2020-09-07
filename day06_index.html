@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 웹사이트 예제</title>
+        <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/reset1.css">
+
+        <style>
+            header {
+                display:flex; /* filex를 이용한 가로 정렬 */
+                justify-content:space-between;
+                padding:30px 10%; /* 반응형에서는 가로는 % 또는 rem */
+            }
+            ul { display:flex; }
+            ul li { padding:10px 2rem; }
+            ul li a {
+                color:#555;
+                font-size:1.1rem;
+                font-weight:700;
+            }
+            ul li a:hover {
+                color:tomato;
+                transition:0.5s;
+            }
+            h1 { font-size:2rem; }
+            .bg-hero {
+                display:flex;
+                padding:0 10%;
+            }
+            .bg-text {
+                width: 50%;
+                padding:300px 0;
+            }
+            .bg-img {
+                width:50%;
+                height:800px;
+                background-image:url(images/bg.jpg);
+                background-size:cover;
+                background-repeat:no-repeat;
+            }
+            .bg-text h1 {
+                text-transform:uppercase;
+                font-size:3rem;
+            }
+            .bg-text p {
+                font-size:1.2rem;
+                color:#aaa;
+            }
+            @media (max-width:600px) {
+                nav { display:none; }
+                .bg-hero {
+                    display:block;
+                    padding:0 2rem;
+                }
+                .bg-text h1 { font-size:2rem; }
+                .bg-text, .bg-img { width:100%; }
+                .bg-img { height:500px; }
+                .bg-text { padding:0; }
+                .bg-text p { text-align:justify; }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>HeadPhone</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SKIKKS</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="bg-hero">
+            <div class="bg-text">
+                <h1>The HeadPhone of Futer.</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi animi nihil obcaecati ratione inventore.
+                    Sint facere reiciendis numquam voluptate, 
+                    ipsam in asperiores voluptatum commodi, 
+                    ea nam obcaecati ipsa deserunt! Maxime!
+                </p>
+            </div>
+            <div class="bg-img"></div>
+        </div>
+    </body>
+</html>
