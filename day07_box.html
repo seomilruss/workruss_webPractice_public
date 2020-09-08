@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>box(303page)</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            body { display:flex; }
+            div {
+                width:100px;
+                height:100px;
+                /*
+                    display:inline-block;
+                    float:left;
+                */
+            }
+            div:first-child { background-color:#f00; }
+            div:nth-child(2) { background-color:#0f0; }
+            div:nth-child(3) { background-color:#00f; }
+        </style>
+    </head>
+    <body>
+        <div>박스1</div>
+        <div>박스2</div>
+        <div>박스3</div>
+    </body>
+</html>
+
+<!-- flex 로 변경 -->
