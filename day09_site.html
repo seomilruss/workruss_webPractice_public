@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 웹사이트 예제1</title>
+        <script src="https://kit.fontawesome.com/4c929b5bbf.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+                font-size:16px;
+            }
+            ul li { list-style:none; }
+            a {
+                text-decoration:none;
+                color:#5a5a5a;
+            }
+            nav {
+                display:flex;
+                justify-content:space-between;
+                padding:20px 0;
+            }
+            ul { display:flex; }
+            .container {
+                width:1200px;
+                margin:0 auto;
+            }
+            .bg {
+                background-color:purple;
+                height:95vh;
+            }
+            nav h1 {
+                font-size:30px;
+            }
+            nav ul li {
+                padding:10px 30px;
+                font-weight:700;
+            }
+            .art-title { text-align:center; }
+            .art-title h2 {
+                font-size:40px;
+                margin-bottom:10px;
+            }
+            .art-title p { color:rgba(0, 0, 0, 0.5); }
+            article { padding:50px 0; }
+            .item {
+                text-align:center;
+                padding:20px;
+                width:30%;
+            }
+            .item i {
+                color:purple;
+                font-size:80px;
+                margin:30px 0;
+            }
+            .item h3 {
+                font-size:30px;
+                margin:10px;
+            }
+            .art-content {
+                display:flex;
+                justify-content:space-between;
+                margin-top:50px;
+            }
+
+            footer {
+                background-color:#000;
+                color:#fff;
+                padding:30px 0;
+            }
+            .copy { text-align:right; }
+
+            @media (max-width:600px) {
+                nav { display:block; }
+                ul { display:none; }
+                .container { width:100%; }
+                .bg { height:50vh; }
+                .item { width:100%; }
+                .art-content {
+                    display:block;
+                    margin-top:0;
+                }
+                .art-title h2 {
+                    font-size:25px;
+                    text-transform:uppercase;
+                }
+                .art-title p { padding:0 50px; }
+                .item:nth-child(2n+1) {
+                    background-color:#f7f7f7;
+                }
+                footer { padding:50px 0; }
+                .copy { text-align:center; }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <h1>LOGO</h1>
+                    <ul>
+                        <li><a href="#">Menu1</a></li>
+                        <li><a href="#">Menu2</a></li>
+                        <li><a href="#">Menu3</a></li>
+                        <li><a href="#">Menu4</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bg">배경이미지</div>
+        </header>
+        <main>
+            <div class="container">
+                <article>
+                    <div class="art-title">
+                        <h2>Simplicity. performance. Rerfection.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Deleniti minima numquam alias hic saepe fuga accusantium necessitatibus non laboriosam
+                            praesentium?
+                        </p>
+                    </div>
+                    <div class="art-content">
+                        <div class="item">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Highly Customizable</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse, ipsum! Ratione ipsam possimus tenetur impedit aut dolores.
+                                Corrupti ipsum excepturi temporibus, inventore ex veritatis eum ipsam, nemo, eos laudantium
+                                id.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Hithly Customizable</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse, ipsum! Ratione ipsam possimus tenetur impedit aut dolores.
+                                Corrupti ipsum excepturi temporibus, inventore ex veritatis eum ipsam, nemo, eos laudantium
+                                id.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Highly Customizable</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse, ipsum! Ratione ipsam possimus tenetur impedit aut dolores.
+                                Corrupti ipsum excepturi temporibus, inventore ex veritatis eum ipsam, nemo, eos laudantium
+                                id.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                &copyCorpyright 2019-2020
+            </div>
+        </footer>
+    </body>
+</html>
